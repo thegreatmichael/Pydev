@@ -62,7 +62,7 @@ public class NewProjectNameAndLocationWizardPage extends AbstractNewProjectPage 
     // initial value stores
     private String initialProjectFieldValue;
 
-    private IPath initialLocationFieldValue;
+    protected IPath initialLocationFieldValue;
 
     // the value the user has entered
     private String customLocationFieldValue;
@@ -76,7 +76,7 @@ public class NewProjectNameAndLocationWizardPage extends AbstractNewProjectPage 
 
     private Button browseButton;
 
-    private PyProjectPythonDetails.ProjectInterpreterAndGrammarConfig details;
+    protected PyProjectPythonDetails.ProjectInterpreterAndGrammarConfig details;
 
     
     /**
@@ -227,7 +227,7 @@ public class NewProjectNameAndLocationWizardPage extends AbstractNewProjectPage 
     /**
      * @param composite
      */
-    private void createProjectDetails(Composite parent) {
+    protected void createProjectDetails(Composite parent) {
         Font font = parent.getFont();
         Composite projectDetails = new Composite(parent, SWT.NONE);
         GridLayout layout = new GridLayout();
@@ -261,7 +261,7 @@ public class NewProjectNameAndLocationWizardPage extends AbstractNewProjectPage 
      *
      * @param parent the parent composite
      */
-    private final void createProjectLocationGroup(Composite parent) {
+    protected void createProjectLocationGroup(Composite parent) {
         Font font = parent.getFont();
         // project specification group
         Composite projectGroup = new Composite(parent, SWT.NONE);
@@ -315,7 +315,7 @@ public class NewProjectNameAndLocationWizardPage extends AbstractNewProjectPage 
      *
      * @param parent the parent composite
      */
-    private final void createProjectNameGroup(Composite parent) {
+    protected final void createProjectNameGroup(Composite parent) {
         Font font = parent.getFont();
         // project specification group
         Composite projectGroup = new Composite(parent, SWT.NONE);

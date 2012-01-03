@@ -9,6 +9,7 @@ package org.python.pydev.core.resource_stubs;
 import java.net.URI;
 import java.util.Map;
 
+import org.eclipse.core.resources.IBuildConfiguration;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -126,6 +127,46 @@ public class AbstractIProjectStub extends AbstractIContainerStub implements IPro
 	public void saveSnapshot(int options, URI snapshotLocation, IProgressMonitor monitor)
 			throws CoreException {
 		throw new RuntimeException("Not implemented");
+	}
+
+
+	@Override
+	public void build(IBuildConfiguration config, int kind,
+			IProgressMonitor monitor) throws CoreException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public IBuildConfiguration getActiveBuildConfig() throws CoreException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IBuildConfiguration getBuildConfig(String configName)
+			throws CoreException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IBuildConfiguration[] getBuildConfigs() throws CoreException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IBuildConfiguration[] getReferencedBuildConfigs(String configName,
+			boolean includeMissing) throws CoreException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hasBuildConfig(String configName) throws CoreException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

@@ -249,12 +249,17 @@ public class PyProjectPythonDetails extends PropertyPage{
                 return "python "+comboGrammarVersion.getText();
             }
             if(radioJy.getSelection()){
-                return "jython "+comboGrammarVersion.getText();
+                return this.getJyVersion();
             }
             if(radioIron.getSelection()){
                 return "ironpython "+comboGrammarVersion.getText();
             }
             throw new RuntimeException("Some radio must be selected");
+        }
+        
+        public String getJyVersion()
+        {
+        	return "jython "+comboGrammarVersion.getText();
         }
         
         public String getProjectInterpreter(){
