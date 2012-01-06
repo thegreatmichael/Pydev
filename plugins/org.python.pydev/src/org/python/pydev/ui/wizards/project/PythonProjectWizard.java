@@ -86,7 +86,7 @@ public class PythonProjectWizard extends AbstractNewProjectWizard implements IEx
      * Creates the project page.
      */
     protected IWizardNewProjectNameAndLocationPage createProjectPage(){
-        return new NewProjectNameAndLocationWizardPage("Setting project properties");
+        return new MediaCompNewProjectWizard("Setting project properties");
     }
 
     /**

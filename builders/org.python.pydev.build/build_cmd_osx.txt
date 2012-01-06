@@ -3,7 +3,6 @@
 #echo in some cases a call to git may stop executing, so, you may need to copy the commands in chunks). 
 
 export BRANCH="mediacomp"
-
 export BASE_LOCAL_PYDEV_GIT="/Users/tgm/dev/Pydev"
 export BUILD_DIR="/Users/tgm/dev/Pydev-build"
 export DEPLOY_DIR="/Users/tgm/dev/Pydev-deploy"
@@ -12,24 +11,15 @@ export GIT_EXECUTABLE="/usr/bin/git"
 export ECLIPSE_CLEAN="/Users/tgm/dev/eclipse-clean"
 export LAUNCHER_PLUGIN="org.eclipse.equinox.launcher_1.2.0.v20110502"
 export BUILDER_PLUGIN="org.eclipse.pde.build_3.7.0.v20110512-1320"
-#set KEYSTORE=%DEPLOY_DIR%\pydevkeystore
-#set KEYSTORE_ALIAS=aptana
-
 export BASEOS="macosx"
 export BASEWS="carbon"
 export BASEARCH="x86"
-
-
 export PATH=$ECLIPSE_CLEAN/plugins/org.apache.ant_1.8.2.v20110505-1300:$PATH
 
-
-#echo actual build command
 mkdir $BUILD_DIR
 mkdir $DEPLOY_DIR
-
 cd $BUILD_DIR
 git clone $BASE_LOCAL_PYDEV_GIT
-#echo git clone git://github.com/aptana/Pydev.git -- this could be used when building against the base git instead of a local git
 cd Pydev
 git clean -f -d builders
 git clean -f -d features
