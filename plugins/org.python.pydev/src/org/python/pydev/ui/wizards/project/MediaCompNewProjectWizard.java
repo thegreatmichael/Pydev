@@ -42,6 +42,7 @@ public class MediaCompNewProjectWizard extends
 	@Override
 	protected void createProjectDetails(Composite parent) {}
 	
+	@Override
 	public void createControl(Composite parent) {
         Composite composite = new Composite(parent, SWT.NULL);
         composite.setLayout(new GridLayout());
